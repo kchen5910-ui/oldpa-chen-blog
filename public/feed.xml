@@ -5,7 +5,7 @@
     <link>https://oldpa-chen.netlify.app/index.html</link>
     <description>一個自由撰寫、隨心發布的地方。沒有審核，沒有演算法，只有我想寫的東西。</description>
     <language>zh-Hant</language>
-    <lastBuildDate>Sat, 15 Aug 2026 15:45:26 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 16:10:14 GMT</lastBuildDate>
     <item>
       <title>顱薦骨療法的緣起：一條顱骨縫，與一整套「會呼吸的身體」</title>
       <link>https://oldpa-chen.netlify.app/posts/cst-genesis.html</link>
@@ -15,20 +15,20 @@
       <description>一個世紀前的整骨醫師盯著顱骨縫發呆，竟發明出一整套「頭—脊椎—薦骨會一起呼吸」的理論。這篇講它的來歷，以及為什麼它聽起來既神祕又合理、卻又有一道對不上的縫。</description>
     </item>
     <item>
+      <title>顱薦骨系列（二）：PRM 與 CRI——一套宣稱「比心跳更慢的內在呼吸」</title>
+      <link>https://oldpa-chen.netlify.app/posts/cst-prm-cri.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/cst-prm-cri.html</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <category>顱薦骨系列</category>
+      <description>操作者說，他們用手能「聽」到一個每分鐘 6 到 12 次的節律，還能誘發一段讓系統暫停的「靜點」。這套主張長什麼樣？在問它真不真之前，先把它講清楚。</description>
+    </item>
+    <item>
       <title>緣起：當照顧變成了一門生意</title>
       <link>https://oldpa-chen.netlify.app/posts/origin.html</link>
       <guid>https://oldpa-chen.netlify.app/posts/origin.html</guid>
       <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
       <category>緣起</category>
       <description>我開這個部落格，不是要賣你什麼。只是有些話，在既有的框框裡說不出口——關於醫病雙方是怎麼一起失了真，以及一個原本謙遜的觀察，如何被裝進營利的機器。</description>
-    </item>
-    <item>
-      <title>技術文章要發在哪：平台專欄還是自己架站</title>
-      <link>https://oldpa-chen.netlify.app/posts/publishing-choice.html</link>
-      <guid>https://oldpa-chen.netlify.app/posts/publishing-choice.html</guid>
-      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
-      <category>技術寫作</category>
-      <description>打算寫一系列技術文章，第一步卻卡在「發到哪裡」。我把兩條路——去現有平台開專欄、還是自己架網站——攤開來比：建置成本、維護難度、內容掌控度、SEO、長期彈性。最後給出我的選擇，以及可以馬上動手的步驟。</description>
     </item>
   </channel>
 </rss>
