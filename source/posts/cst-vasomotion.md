@@ -64,6 +64,7 @@ excerpt: CST 操作者說他們用手「聽」到一個每分鐘 6–12 次的�
 - [（二）PRM 與 CRI：比心跳更慢的內在呼吸](posts/cst-prm-cri.html)
 - [（三）血管舒縮波：那個被感覺到的節律](posts/cst-vasomotion.html)
 - [（四）證據盤點：被說可治什麼，研究又怎麼說](posts/cst-evidence.html)
+- [（五）手感之下：為什麼不同人摸到的節律對不起來](posts/cst-reliability.html)
 
 *系列陸續發表中。*
 
