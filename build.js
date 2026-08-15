@@ -152,6 +152,7 @@ function layout({ title, description, bodyClass = '', main, url = 'index.html', 
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/">
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeAttr(description || SITE.description)}">
 <link rel="canonical" href="${escapeAttr(canonical)}">

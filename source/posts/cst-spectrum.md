@@ -1,6 +1,6 @@
 ---
 title: 顱薦骨系列（六）：徒手療法的光譜——從猛敲的掉桌，到鎳幣般的輕觸
-date: 2026-08-16
+date: 2026-08-15
 category: 顱薦骨系列
 tags: [顱薦骨, 徒手療法, 整脊, Thompson, 手感]
 slug: cst-spectrum
@@ -85,8 +85,9 @@ Thompson 在 1950 年代初做出第一代掉桌機關、1954 年拿到專利，
 - [（六）徒手療法的光譜：從猛敲的掉桌，到鎳幣般的輕觸](posts/cst-spectrum.html)
 
 - [（七）最該慢下來的戰場：兒童、新生兒與「感覺統合」](posts/cst-children.html)
+- [（八）一張圖看懂：顱薦骨療法爭議全景](posts/cst-summary.html)
 
-*系列陸續發表中。*
+*顱薦骨系列全文（一）～（八）到此。*
 
 ---
 

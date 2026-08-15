@@ -103,8 +103,9 @@ CST 的操作常包含對頭骨的輕觸，甚至針對「顱骨節律」去做�
 - [（五）手感之下：為什麼不同人摸到的節律對不起來](posts/cst-reliability.html)
 - [（六）徒手療法光譜：從「啪一聲」到鎳幣般輕觸](posts/cst-spectrum.html)
 - [（七）最該慢下來的戰場：兒童、新生兒與「感覺統合」](posts/cst-children.html)
+- [（八）一張圖看懂：顱薦骨療法爭議全景](posts/cst-summary.html)
 
-*系列陸續發表中。*
+*顱薦骨系列全文（一）～（八）到此。*
 
 ---
 
