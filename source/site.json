@@ -2,7 +2,7 @@
   "title": "陳老叟的筆記",
   "description": "一個自由撰寫、隨心發布的地方。沒有審核，沒有演算法，只有我想寫的東西。",
   "author": "陳老叟",
-  "baseUrl": "",
+  "baseUrl": "https://oldpa-chen.netlify.app",
   "socialImage": "",
   "postsPerHome": 12,
   "showDarkToggle": true,

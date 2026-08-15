@@ -473,6 +473,8 @@ function render404() {
 function main() {
   const t0 = Date.now();
   console.log('▶ 開始編譯 indie-blog ...');
+  // 先清空舊輸出，避免刪除文章後殘留廢檔
+  fs.rmSync(OUT, { recursive: true, force: true });
   ensureDir(OUT);
   ensureDir(path.join(OUT, 'posts'));
   ensureDir(path.join(OUT, 'assets', 'css'));
