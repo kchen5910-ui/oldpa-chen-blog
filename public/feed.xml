@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>陳老叟的筆記</title>
+    <link>index.html</link>
+    <description>一個自由撰寫、隨心發布的地方。沒有審核，沒有演算法，只有我想寫的東西。</description>
+    <language>zh-Hant</language>
+    <lastBuildDate>Sat, 15 Aug 2026 14:31:53 GMT</lastBuildDate>
+    <item>
+      <title>顱薦骨療法的緣起：一條顱骨縫，與一整套「會呼吸的身體」</title>
+      <link>posts/cst-genesis.html</link>
+      <guid>posts/cst-genesis.html</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <category>顱薦骨系列</category>
+      <description>一個世紀前的整骨醫師盯著顱骨縫發呆，竟發明出一整套「頭—脊椎—薦骨會一起呼吸」的理論。這篇講它的來歷，以及為什麼它聽起來既神祕又合理、卻又有一道對不上的縫。</description>
+    </item>
+    <item>
+      <title>緣起：當照顧變成了一門生意</title>
+      <link>posts/origin.html</link>
+      <guid>posts/origin.html</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <category>緣起</category>
+      <description>我開這個部落格，不是要賣你什麼。只是有些話，在既有的框框裡說不出口——關於醫病雙方是怎麼一起失了真，以及一個原本謙遜的觀察，如何被裝進營利的機器。</description>
+    </item>
+    <item>
+      <title>技術文章要發在哪：平台專欄還是自己架站</title>
+      <link>posts/publishing-choice.html</link>
+      <guid>posts/publishing-choice.html</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <category>技術寫作</category>
+      <description>打算寫一系列技術文章，第一步卻卡在「發到哪裡」。我把兩條路——去現有平台開專欄、還是自己架網站——攤開來比：建置成本、維護難度、內容掌控度、SEO、長期彈性。最後給出我的選擇，以及可以馬上動手的步驟。</description>
+    </item>
+    <item>
+      <title>歡迎來到我的獨立部落格</title>
+      <link>posts/welcome.html</link>
+      <guid>posts/welcome.html</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <category>站務</category>
+      <description>這是一篇示範文章。這裡是獨立於其他網站的全新空間，想寫什麼就寫什麼。</description>
+    </item>
+    <item>
+      <title>Markdown 排版速查（這篇本身就是範例）</title>
+      <link>posts/markdown-demo.html</link>
+      <guid>posts/markdown-demo.html</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+      <category>教學</category>
+      <description>一篇示範文，同時也是 Markdown 語法的速查表。標題、清單、引用、程式碼、連結都包含在內。</description>
+    </item>
+    <item>
+      <title>為什麼我需要一個「沒有審核」的角落</title>
+      <link>posts/free-writing.html</link>
+      <guid>posts/free-writing.html</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <category>隨筆</category>
+      <description>有些話不適合發在別人的平台，有些想法還沒成形、不該被演算法決定誰看得到。這就是這裡存在的理由。</description>
+    </item>
+  </channel>
+</rss>

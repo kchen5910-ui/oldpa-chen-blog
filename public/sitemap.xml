@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>index.html</loc>
+  </url>
+  <url>
+    <loc>archive.html</loc>
+  </url>
+  <url>
+    <loc>topics.html</loc>
+  </url>
+  <url>
+    <loc>about.html</loc>
+  </url>
+  <url>
+    <loc>posts/cst-genesis.html</loc>
+  </url>
+  <url>
+    <loc>posts/origin.html</loc>
+  </url>
+  <url>
+    <loc>posts/publishing-choice.html</loc>
+  </url>
+  <url>
+    <loc>posts/welcome.html</loc>
+  </url>
+  <url>
+    <loc>posts/markdown-demo.html</loc>
+  </url>
+  <url>
+    <loc>posts/free-writing.html</loc>
+  </url>
+</urlset>

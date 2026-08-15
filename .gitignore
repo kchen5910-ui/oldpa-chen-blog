@@ -1,0 +1,7 @@
+# 依賴（Netlify 部署時會自動 npm install，不需上傳）
+node_modules/
+
+# 系統 / 暫存檔
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,11 @@
+[build]
+  # 編譯指令：把 source/ 下的 Markdown 編譯成 public/
+  command = "node build.js"
+  # 要上傳部署的資料夾
+  publish = "public"
+
+# 任何找不到的路由都回傳 404.html（靜態站也適用）
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

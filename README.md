@@ -1,0 +1,84 @@
+# 我的獨立部落格（indie-blog）
+
+一個**完全獨立**於其他專案的靜態部落格：自由撰寫、隨心發布、無平台審核、可部署到任何靜態主機。
+
+> 此專案與診所官網（`F:\網頁構想`）**完全分離**，擁有獨立的程式碼庫、內容與部署環境。
+
+## 目錄結構
+
+```
+indie-blog/
+├─ source/              ← 你寫作的地方（唯一需要動的資料夾）
+│  ├─ site.json         ← 站台設定（標題、作者、描述…）
+│  ├─ posts/            ← 文章（每篇一個 .md）
+│  └─ pages/            ← 獨立頁面（如 about.md → about.html）
+├─ assets/              ← 樣式與腳本（可改）
+│  ├─ css/style.css
+│  └─ js/main.js
+├─ build.js             ← 編譯器（不用改）
+├─ serve.js             ← 本地預覽伺服器（不用改）
+├─ package.json
+└─ public/              ← 「編譯產出」，這就是要上傳部署的資料夾（自動生成）
+```
+
+## 如何新增一篇文章
+
+1. 在 `source/posts/` 新建一個 `.md` 檔，例如 `my-post.md`。
+2. 檔案開頭寫 frontmatter：
+
+   ```markdown
+   ---
+   title: 文章標題
+   date: 2026-08-15
+   category: 隨筆          # 分類（單一）
+   tags: [想法, 自由]      # 標籤（可多個，用逗號或 YAML 陣列）
+   excerpt: 選填，摘要；不填會自動擷取正文前 140 字
+   draft: false            # 設 true 則不會發布
+   ---
+
+   這裡開始寫正文，支援完整 Markdown。
+   ```
+
+3. 存檔後執行編譯：
+
+   ```bash
+   npm run build
+   ```
+
+4. 本地預覽：
+
+   ```bash
+   npm run serve      # 開 http://localhost:4321/
+   ```
+
+## 功能
+
+- **文章發布**：寫 Markdown → 編譯成靜態頁面，零後端。
+- **分類 / 標籤**：frontmatter 設定；`topics.html` 提供點擊篩選介面。
+- **基本排版**：Markdown 全功能（標題、清單、引用、程式碼、表格、圖片、連結）。
+- **閱讀介面**：閱讀導向排版、響應式、深色模式切換、上一篇/下一篇導覽、RSS。
+- **無審核**：內容完全由你掌控，不經任何第三方平台。
+- **SEO 與分享**：每頁自動產生 `canonical`、Open Graph / Twitter Card meta；編譯時一併產出 `sitemap.xml`、`robots.txt`、`404.html`，並內嵌 SVG favicon，便於搜尋引擎收錄與社群分享。
+
+## 部署
+
+`public/` 資料夾就是整個網站，把它上傳到任何靜態主機即可。本機已附 `netlify.toml`（建置指令 `node build.js`、發布目錄 `public`、並以 `404.html` 處理未知路由），連結 Git 倉庫即可一鍵部署。
+
+- **Netlify**：連結 Git 倉庫即自動套用 `netlify.toml`；或手動拖放 `public/` 資料夾。
+- **Vercel**：建置指令 `node build.js`、輸出目錄 `public`。
+- **GitHub Pages**：把 `public/` 內容推到 `gh-pages` 分支。
+- **自己的空間 / 任意靜態主機**：FTP 上傳 `public/` 即可。
+
+### 上線前兩件事
+
+1. **設定 `baseUrl`**：在 `source/site.json` 填入你的網域（例如 `https://blog.example.com`），`canonical`、RSS、sitemap 與 OG 網址才會是絕對路徑，對 SEO 與訂閱正確性很重要。
+2. **替換示範內容**：把 `source/posts/` 裡的示範文章（`welcome.md` / `markdown-demo.md` / `free-writing.md`）刪除或改成你自己的內容；並視需要修改 `source/site.json` 的標題、作者與描述。
+
+> 選填：在 `site.json` 加 `"socialImage": "assets/img/cover.png"` 可讓分享到社群時顯示預覽圖（圖片請放在 `assets/` 下，編譯時會一併複製到 `public/`）。
+
+## 擴充建議
+
+- 想要「草稿預覽」：建一個 `npm run build:all` 暫時把 `draft` 視為發布。
+- 想要網站搜尋：在 `main.js` 加一個針對 `archive.html` 的客戶端篩選。
+- 想要留言：接靜態留言服務（如 utterances / giscus），仍是純靜態。
+- 想要多作者：在 frontmatter 加 `author` 欄位並於版面顯示。

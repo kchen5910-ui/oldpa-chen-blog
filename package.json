@@ -1,0 +1,14 @@
+{
+  "name": "indie-blog",
+  "version": "1.0.0",
+  "description": "獨立靜態部落格 — Markdown 寫作，純靜態部署，無內容審核",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node serve.js",
+    "dev": "node build.js && node serve.js"
+  },
+  "devDependencies": {
+    "marked": "^12.0.2"
+  }
+}
