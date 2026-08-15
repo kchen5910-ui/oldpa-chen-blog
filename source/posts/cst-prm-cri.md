@@ -83,6 +83,8 @@ PRM 運作時會表現出一個可以被「摸到」的節律，叫做 **CranioS
 - [（五）手感之下：為什麼不同人摸到的節律對不起來](posts/cst-reliability.html)
 - [（六）徒手療法的光譜：從猛敲的掉桌，到鎳幣般的輕觸](posts/cst-spectrum.html)
 
+- [（七）最該慢下來的戰場：兒童、新生兒與「感覺統合」](posts/cst-children.html)
+
 *系列陸續發表中。*
 
 ---

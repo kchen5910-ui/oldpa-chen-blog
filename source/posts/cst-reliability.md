@@ -82,6 +82,8 @@ Hartman 與 Norton 的綜述，還順手用解剖學打了一個更根本的臉�
 - [（五）手感之下：為什麼不同人摸到的節律對不起來](posts/cst-reliability.html)
 - [（六）徒手療法的光譜：從猛敲的掉桌，到鎳幣般的輕觸](posts/cst-spectrum.html)
 
+- [（七）最該慢下來的戰場：兒童、新生兒與「感覺統合」](posts/cst-children.html)
+
 *系列陸續發表中。*
 
 ---
