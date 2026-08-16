@@ -153,6 +153,7 @@ function layout({ title, description, bodyClass = '', main, url = 'index.html', 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <base href="/">
+<script>window.COMMENTS_API_BASE=${JSON.stringify(SITE.commentsApiBase || '')};</script>
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeAttr(description || SITE.description)}">
 <link rel="canonical" href="${escapeAttr(canonical)}">

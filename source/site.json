@@ -6,5 +6,6 @@
   "socialImage": "",
   "postsPerHome": 12,
   "showDarkToggle": true,
-  "lang": "zh-Hant"
+  "lang": "zh-Hant",
+  "commentsApiBase": ""
 }

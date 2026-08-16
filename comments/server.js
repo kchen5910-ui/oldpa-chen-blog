@@ -27,7 +27,8 @@ const PUBLIC = path.join(ROOT, '..', 'public');
 const DATA_DIR = path.join(ROOT, 'data');
 const DATA_FILE = path.join(DATA_DIR, 'comments.json');
 const PORT = process.env.PORT || 8787;
-const API_ORIGIN = (process.env.COMMENTS_API_BASE || '').replace(/\/+$/, '');
+// 跨域時允許的前端來源（自託管請設為你的網站網域，例如 https://oldpa-chen.netlify.app）
+const CORS_ORIGIN = process.env.COMMENTS_CORS_ORIGIN || '*';
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -133,7 +134,7 @@ function sendJson(res, code, obj) {
   const body = JSON.stringify(obj);
   res.writeHead(code, {
     'Content-Type': 'application/json; charset=utf-8',
-    'Access-Control-Allow-Origin': API_ORIGIN || '*',
+    'Access-Control-Allow-Origin': CORS_ORIGIN,
     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Cache-Control': 'no-store',
@@ -145,7 +146,7 @@ function handleApi(req, res, url) {
   // CORS 預檢
   if (req.method === 'OPTIONS') {
     res.writeHead(204, {
-      'Access-Control-Allow-Origin': API_ORIGIN || '*',
+      'Access-Control-Allow-Origin': CORS_ORIGIN,
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     });
