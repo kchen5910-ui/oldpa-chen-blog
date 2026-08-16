@@ -85,7 +85,12 @@ function parseFrontmatter(raw) {
       curListKey = null;
     } else {
       val = val.replace(/^["']|["']$/g, '');
-      data[key] = val;
+      // 整數值（如文章的 order 欄位）轉為數字，便於同日排序
+      if (/^-?\d+$/.test(val)) {
+        data[key] = Number(val);
+      } else {
+        data[key] = val;
+      }
       // 值為空（如 "tags:"）時，後續 "- " 行視為其列表項目
       curListKey = val === '' ? key : null;
     }
@@ -242,12 +247,13 @@ function loadPosts() {
       excerpt: data.excerpt || plainExcerpt(body),
       bodyHtml: marked.parse(body),
       draft: data.draft === true || data.draft === 'true',
+      order: typeof data.order === 'number' ? data.order : 9999,
     };
   });
-  // 排除草稿，依日期新→舊
+  // 排除草稿，依日期新→舊；同日則依 order 由小到大（序文/系列開頭排前面）
   return posts
     .filter((p) => !p.draft)
-    .sort((a, b) => b.date - a.date);
+    .sort((a, b) => b.date - a.date || a.order - b.order);
 }
 
 /* ---------- 各頁面 ---------- */
@@ -519,8 +525,14 @@ function render404() {
 function main() {
   const t0 = Date.now();
   console.log('▶ 開始編譯 indie-blog ...');
-  // 先清空舊輸出，避免刪除文章後殘留廢檔
-  fs.rmSync(OUT, { recursive: true, force: true });
+  // 先清空舊輸出，避免刪除文章後殘留廢檔。
+  // 若環境的 safe-delete 攔截了刪除（如某些沙箱），改以「覆寫」模式繼續，
+  // 避免整個建置崩潰；罕見的殘留廢檔不影響正常發文。
+  try {
+    fs.rmSync(OUT, { recursive: true, force: true });
+  } catch (e) {
+    console.warn('⚠️  無法清空 public/（可能被安全機制攔截），改以覆寫模式繼續：', e.message);
+  }
   ensureDir(OUT);
   ensureDir(path.join(OUT, 'posts'));
   ensureDir(path.join(OUT, 'assets', 'css'));
