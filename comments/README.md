@@ -50,3 +50,22 @@ honeypot 蜜罐欄位、IP 限速（5 次/分、30 次/時）、名稱 ≤40 字
 留言存於 `comments/data/comments.json`（已加入 `.gitignore`，不納入版本控制）。
 注意：多數 PaaS 的磁碟在 redeploy 時可能被清空，正式長期營運前可考慮
 改用 SQLite 或外部資料庫以提升耐久性。
+
+## 備份 / 匯出 / 還原（manage.js）
+備份與遷移用的小工具（零依賴，`node manage.js <命令>`）：
+
+| 命令 | 說明 |
+|---|---|
+| `node manage.js backup` | 快照備份 `data/comments.json` → `backups/comments-<時間戳>.json` |
+| `node manage.js list` | 列出所有備份及其留言數 |
+| `node manage.js stats` | 各文章留言數統計 |
+| `node manage.js export --format csv` | 匯出 CSV（含 BOM，Excel 直接開）；可加 `--out <檔>` 指定路徑 |
+| `node manage.js export --format md` | 匯出 Markdown（按文章分組，好讀） |
+| `node manage.js restore --from <備份> --yes` | 從備份還原（會先自動備份現狀，需 `--yes` 確認） |
+
+典型用法：
+- **定期備份**：排程執行 `node manage.js backup`（例如每天一次），對抗 PaaS 重啟清盤。
+- **搬遷**：先在舊主機 `backup` 並下載該備份檔，再到新主機 `restore --from <備份> --yes`。
+- **留底閱讀 / 備查**：`export --format md` 產生人類可讀的純文字檔。
+
+備份檔與資料檔同樣含訪客輸入，已列入 `.gitignore`，請勿提交進版本庫。

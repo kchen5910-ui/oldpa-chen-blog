@@ -8,3 +8,5 @@ Thumbs.db
 
 # 留言資料（運行時生成，含訪客輸入，不納入版本控制）
 comments/data/
+# 留言備份（含訪客資料，本地運維用，不納入版本控制）
+comments/backups/
