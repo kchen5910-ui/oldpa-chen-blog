@@ -282,3 +282,106 @@ a.chip:hover { border-color: var(--accent); }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* ---------- 留言區 ---------- */
+.comments {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.comments-title {
+  font-size: 1.25rem;
+  margin: 0 0 16px;
+  color: var(--text);
+}
+.comments-list { margin-bottom: 28px; }
+.comments-loading { margin: 0; }
+.comment-card {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  margin-bottom: 12px;
+}
+.comment-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.comment-name { font-weight: 600; color: var(--accent); }
+.comment-time { font-size: .8rem; color: var(--muted); }
+.comment-body {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--text);
+}
+
+.comment-form { display: block; }
+.form-row { margin-bottom: 14px; }
+.form-row label {
+  display: block;
+  font-size: .9rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.form-row .req { color: #c0563f; margin-left: 2px; }
+.comment-form input[type="text"],
+.comment-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.comment-form input[type="text"]:focus,
+.comment-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.comment-form textarea { resize: vertical; }
+.form-error {
+  color: #c0563f;
+  font-size: .85rem;
+  margin: 6px 0 0;
+  min-height: 1.1em;
+}
+/* 蜜罐：正常人看不見也不會填 */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.chars-hint { font-size: .8rem; color: var(--muted); }
+.btn-primary {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  padding: 9px 20px;
+  border-radius: var(--radius);
+  font-size: .95rem;
+  cursor: pointer;
+  transition: .15s;
+}
+.btn-primary:hover { opacity: .92; }
+.btn-primary:disabled { opacity: .55; cursor: default; }
+
+@media (max-width: 600px) {
+  .form-actions { flex-direction: column-reverse; align-items: stretch; }
+  .btn-primary { width: 100%; }
+  .chars-hint { text-align: right; }
+}
