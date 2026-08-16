@@ -53,21 +53,42 @@ function parseFrontmatter(raw) {
   const m = raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?([\s\S]*)$/);
   if (!m) return { data: {}, body: raw };
   const data = {};
+  let curListKey = null; // 目前正接收區塊列表（tags: 下方 - 項目）的鍵
   m[1].split(/\r?\n/).forEach((line) => {
+    // 區塊列表項目：以 "- " 開頭，歸入上一個空值鍵
+    const listItem = line.match(/^\s*-\s+(.*)$/);
+    if (listItem) {
+      if (curListKey) {
+        const item = listItem[1].trim().replace(/^["']|["']$/g, '').trim();
+        if (item) {
+          if (!Array.isArray(data[curListKey])) data[curListKey] = [];
+          data[curListKey].push(item);
+        }
+      }
+      return;
+    }
     const idx = line.indexOf(':');
-    if (idx === -1) return;
+    if (idx === -1) {
+      curListKey = null;
+      return;
+    }
     const key = line.slice(0, idx).trim();
     let val = line.slice(idx + 1).trim();
     if (val.startsWith('[') && val.endsWith(']')) {
+      // 單行陣列格式：[a, b, c]
       val = val
         .slice(1, -1)
         .split(',')
         .map((s) => s.trim().replace(/^["']|["']$/g, ''))
         .filter(Boolean);
+      data[key] = val;
+      curListKey = null;
     } else {
       val = val.replace(/^["']|["']$/g, '');
+      data[key] = val;
+      // 值為空（如 "tags:"）時，後續 "- " 行視為其列表項目
+      curListKey = val === '' ? key : null;
     }
-    if (key) data[key] = val;
   });
   return { data, body: m[2] };
 }
