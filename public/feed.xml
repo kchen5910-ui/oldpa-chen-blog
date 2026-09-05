@@ -5,7 +5,63 @@
     <link>https://oldpa-chen.netlify.app/index.html</link>
     <description>一個自由撰寫、隨心發布的地方。沒有審核，沒有演算法，只有我想寫的東西。</description>
     <language>zh-Hant</language>
-    <lastBuildDate>Mon, 17 Aug 2026 15:53:47 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 06:28:04 GMT</lastBuildDate>
+    <item>
+      <title>AMCT 筆記（一）：他們發明了那把小器械，卻刻意不寫上自己的名字</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-genesis.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-genesis.html</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+      <category>AMCT 筆記</category>
+      <description>我在官網寫過「我用器械，不是為了省力」。那句話到現在還是真的——但當初做這把器械的人，恰恰就是為了省力，只不過他們要省的是自己的手。這篇講那兩個人和他們做過的幾個決定。</description>
+    </item>
+    <item>
+      <title>功虧一簣，與未完成的路</title>
+      <link>https://oldpa-chen.netlify.app/posts/enraku-failure.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/enraku-failure.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+      <category>遠絡筆記</category>
+      <description>遠絡雖千瘡百孔，一人之力走到這步已難得。這一篇，先整理柯醫師的學術成就、也談談當年「借鑑」的說法；再說它為什麼敗落——不只是沒錢沒勢，還失去了人和；最後是我離隊後想挽回局勢的幾次嘗試，以及一個放在心裡的盼望。</description>
+    </item>
+    <item>
+      <title>我們的掙扎和努力：遠絡的改進之道</title>
+      <link>https://oldpa-chen.netlify.app/posts/enraku-improvements.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/enraku-improvements.html</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <category>遠絡筆記</category>
+      <description>遠絡碰到的難題有兩大方向——施術方式連帶收費、以及學術認同。這一篇談的是，為了讓它走下去，我們後來實際做了哪些努力：開發治療儀器、叩關學術、海外招生。有些撐住了一時，有些只是讓「為什麼走不遠」現形得更清楚。</description>
+    </item>
+    <item>
+      <title>遠絡遇到的那些現實難題</title>
+      <link>https://oldpa-chen.netlify.app/posts/enraku-struggles.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/enraku-struggles.html</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <category>遠絡筆記</category>
+      <description>上一篇講完三個親歷病例，你心裡可能想：這麼有用，為什麼沒見它發展起來？這篇就來談談，遠絡在執業和研發上撞上的那些現實牆。</description>
+    </item>
+    <item>
+      <title>遠絡的三個親歷病例</title>
+      <link>https://oldpa-chen.netlify.app/posts/enraku-cases.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/enraku-cases.html</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <category>遠絡筆記</category>
+      <description>遠絡在臨床上走過台灣、日本、美國，看過的奇蹟不算少。這篇只挑三個我親歷或親眼所見的——但先說清楚：這些是難治性的病例，還稱不上是可複製的成功。</description>
+    </item>
+    <item>
+      <title>我怎麼學會遠絡的</title>
+      <link>https://oldpa-chen.netlify.app/posts/enraku-learning.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/enraku-learning.html</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+      <category>遠絡筆記</category>
+      <description>上篇說好要講「體流線」和「治療點」怎麼認識。這篇就從課程說起——遠絡不是隨便一個工作坊，它有一套從基礎到研究班、越走越深的課程體系；而真正裝在裡頭的，是十二條體流線和一百零八個治療點。</description>
+    </item>
+    <item>
+      <title>我為什麼去學遠絡</title>
+      <link>https://oldpa-chen.netlify.app/posts/enraku-why-i-learned.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/enraku-why-i-learned.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <category>遠絡筆記</category>
+      <description>說起來有點滑稽，我當年會去學遠絡，起點不是什麼高明的理論，是被一句招生廣告詞帶進門的——因為我太太有第一型糖尿病。</description>
+    </item>
     <item>
       <title>歐陸整骨的顱薦骨支派：從 Still 的「身體是一個單元」，到會呼吸的顱骨</title>
       <link>https://oldpa-chen.netlify.app/posts/european-osteopathy.html</link>
@@ -13,6 +69,14 @@
       <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
       <category>整骨傳統</category>
       <description>顱薦骨系列講的是美國的 CST（Upledger）。但「顱骨會動、身體會呼吸」這個想法，在歐洲走出了一條更解剖、更「整體」的顱薦骨之路——它更貼近 Sutherland 的原貌，也更能看見整個徒手療法家族怎麼長出來。</description>
+    </item>
+    <item>
+      <title>膝蓋喀喀響，是不是軟骨磨光了？</title>
+      <link>https://oldpa-chen.netlify.app/posts/knee-clicking.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/knee-clicking.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <category>膝蓋筆記</category>
+      <description>膝蓋一蹲就喀喀響，很多人第一個念頭是「軟骨磨光了」。聲音和磨損有關係，但沒那麼直接——先聽聽這聲音到底在說什麼。</description>
     </item>
     <item>
       <title>頭痛從脖子來：當痛在頭，源頭卻在後頸</title>
@@ -23,44 +87,12 @@
       <description>你以為的偏頭痛，可能將近五分之一其實是「脖子在說話」。這篇講清楚什麼是頸源性頭痛、為什麼頸部問題會讓你「頭痛」、它和偏頭痛怎麼分，以及哪些紅旗代表該先找醫師。</description>
     </item>
     <item>
-      <title>序言——從一條走不出來的迴圈說起</title>
-      <link>https://oldpa-chen.netlify.app/posts/hip-knee-foot-preface.html</link>
-      <guid>https://oldpa-chen.netlify.app/posts/hip-knee-foot-preface.html</guid>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
-      <category>髖膝足系列</category>
-      <description>這一系列想談髖、膝、足這條承重鏈。但從哪說起？先從一個我反覆看到的畫面：膝蓋痛的人，吃藥、復健、打針、換關節，最後卻常走回原點。</description>
-    </item>
-    <item>
-      <title>髖關節——承重鏈的頂端</title>
-      <link>https://oldpa-chen.netlify.app/posts/hip-joint.html</link>
-      <guid>https://oldpa-chen.netlify.app/posts/hip-joint.html</guid>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
-      <category>髖膝足系列</category>
-      <description>走路、上下樓，髖關節要扛住好幾倍的體重。這一篇先談醫學已經知道的，再談我在現場看到、想到的——包括一個常被搞反的因果。</description>
-    </item>
-    <item>
-      <title>膝蓋：站在中間的那一個</title>
-      <link>https://oldpa-chen.netlify.app/posts/knee-joint.html</link>
-      <guid>https://oldpa-chen.netlify.app/posts/knee-joint.html</guid>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
-      <category>髖膝足系列</category>
-      <description>膝是下肢承重鏈裡「中間的孩子」——很少自己惹事，只是卡在中間承受上下游傳來的力。這篇先說醫學已經知道的，再從另一個角度，看看為什麼單治膝往往治不長久。</description>
-    </item>
-    <item>
-      <title>足部：整條鏈的地基，卻常被忽略</title>
-      <link>https://oldpa-chen.netlify.app/posts/foot-ankle.html</link>
-      <guid>https://oldpa-chen.netlify.app/posts/foot-ankle.html</guid>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
-      <category>髖膝足系列</category>
-      <description>腳是整條下肢鏈的「地基」，卻也是最常被忽略的一截。這篇先談醫學已經知道的，再談我在現場看到的——包括一個容易誤會的點：痛不見了，問題不一定走了。</description>
-    </item>
-    <item>
-      <title>連動：一條承重鏈，與那個被誤解的「退化」</title>
-      <link>https://oldpa-chen.netlify.app/posts/kinetic-chain-oa.html</link>
-      <guid>https://oldpa-chen.netlify.app/posts/kinetic-chain-oa.html</guid>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
-      <category>髖膝足系列</category>
-      <description>髖、膝、足不是三個孤立的關節，而是一條承重鏈。痛點常常只是整條鏈裡最先抗不住的一節。這篇把它們拼起來，也談談那個人人聽過、卻最常被誤解的「退化」。</description>
+      <title>遠絡醫學，和我那段還沒理清楚的緣分</title>
+      <link>https://oldpa-chen.netlify.app/posts/enraku-beginning.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/enraku-beginning.html</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <category>遠絡筆記</category>
+      <description>有人問我要不要寫遠絡。我說好啊。坐下來才發現，不是沒東西寫，是東西太多、還夾著我自己也還在整理的感覺。</description>
     </item>
     <item>
       <title>顱薦骨系列（八）一張圖看懂：顱薦骨療法爭議全景</title>
@@ -75,7 +107,7 @@
       <link>https://oldpa-chen.netlify.app/posts/cst-children.html</link>
       <guid>https://oldpa-chen.netlify.app/posts/cst-children.html</guid>
       <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
-      <category>健康醫學</category>
+      <category>顱薦骨系列</category>
       <description>兒童是顱薦骨療法推廣最用力、也最令人不安的戰場。一份真實個案、為什麼嬰幼兒的頭最敏感、以及證據與紅旗，都攤開來看。</description>
     </item>
     <item>
@@ -99,7 +131,7 @@
       <link>https://oldpa-chen.netlify.app/posts/cst-evidence.html</link>
       <guid>https://oldpa-chen.netlify.app/posts/cst-evidence.html</guid>
       <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
-      <category>健康醫學</category>
+      <category>顱薦骨系列</category>
       <description>支持者把顱薦骨療法寫得能治一大票毛病。這篇把那份清單攤開，對照真正被做過的研究——以及，什麼情況下你絕對該先問醫師。</description>
     </item>
     <item>
