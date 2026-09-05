@@ -3,6 +3,8 @@
   "description": "一個自由撰寫、隨心發布的地方。沒有審核，沒有演算法，只有我想寫的東西。",
   "author": "陳老叟",
   "baseUrl": "https://oldpa-chen.netlify.app",
+  "officialSite": "https://oldfolksgang.com.tw/",
+  "officialSiteLabel": "老師傅工作室 · 美式整復（士林）",
   "socialImage": "",
   "postsPerHome": 12,
   "showDarkToggle": true,

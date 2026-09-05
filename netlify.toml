@@ -4,8 +4,5 @@
   # 要上傳部署的資料夾
   publish = "public"
 
-# 任何找不到的路由都回傳 404.html（靜態站也適用）
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
+# 靜態站 404 由 Netlify 預設處理（public/404.html 已存在），
+# 不需要 catch-all 重定向；此處僅保留 build 設定。

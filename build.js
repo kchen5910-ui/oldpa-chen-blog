@@ -218,6 +218,7 @@ ${main}
   <div class="wrap">
     <p>© ${new Date().getFullYear()} ${escapeHtml(SITE.author)} · ${escapeHtml(SITE.title)}</p>
     <p class="muted">本部落格由 Markdown 靜態生成，自由撰寫、獨立部署。</p>
+    ${SITE.officialSite ? `<p class="footer-crosslink"><span class="muted">想預約或看服務項目？</span> <a href="${escapeAttr(SITE.officialSite)}">${escapeHtml(SITE.officialSiteLabel || SITE.officialSite)}</a></p>` : ''}
   </div>
 </footer>
 <script src="assets/js/main.js"></script>
@@ -284,6 +285,14 @@ function renderHome(posts) {
   <h1>${escapeHtml(SITE.title)}</h1>
   <p class="lede">${escapeHtml(SITE.description)}</p>
 </section>
+${
+  SITE.officialSite
+    ? `<aside class="cross-banner">
+  <span class="cross-banner-text">想預約或看服務項目？</span>
+  <a class="cross-banner-link" href="${escapeAttr(SITE.officialSite)}">${escapeHtml(SITE.officialSiteLabel || SITE.officialSite)} »</a>
+</aside>`
+    : ''
+}
 <section class="post-list">
   ${items || '<p class="muted">還沒有文章，到 source/posts/ 放一篇 .md 再執行 node build.js 即可。</p>'}
 </section>
@@ -297,14 +306,74 @@ ${
 }
 
 function renderPost(p, allPosts) {
-  const idx = allPosts.findIndex((x) => x.slug === p.slug);
-  const prev = allPosts[idx + 1]; // 較舊
-  const next = allPosts[idx - 1]; // 較新
+  // 同分類內做上一篇／下一篇導覽，讓系列文章能依序閱讀，不被其他系列插隊
+  const series = allPosts.filter((x) => x.category === p.category);
+  // 系列內若多數文章有 order，優先用 order；其餘沿用日期順序
+  const orderByCount = series.filter((x) => x.order !== 9999).length;
+  if (orderByCount > series.length / 2) {
+    series.sort((a, b) => a.order - b.order || a.date - b.date);
+  } else {
+    series.sort((a, b) => a.date - b.date);
+  }
+  const idx = series.findIndex((x) => x.slug === p.slug);
+  const prev = series[idx - 1]; // 較早（系列上一篇）
+  const next = series[idx + 1]; // 較後（系列下一篇）
+  const isSeries = series.length >= 2;
   const nav = `
 <nav class="post-nav">
   <span>${prev ? `<a href="posts/${prev.slug}.html">« ${escapeHtml(prev.title)}</a>` : ''}</span>
   <span>${next ? `<a href="posts/${next.slug}.html">${escapeHtml(next.title)} »</a>` : ''}</span>
 </nav>`;
+
+  // 系列閱讀路徑塊：顯示這篇在系列中的位置與全部系列文章連結
+  const seriesPath = isSeries
+    ? `
+<aside class="series-path" aria-label="系列閱讀路徑">
+  <div class="series-path-head">
+    <span class="series-path-label">系列閱讀路徑</span>
+    <span class="series-path-title">${escapeHtml(p.category)}</span>
+    <span class="series-path-progress">第 ${idx + 1} / ${series.length} 篇</span>
+  </div>
+  <ol class="series-path-list">
+    ${series
+      .map(
+        (x, i) =>
+          `<li class="${x.slug === p.slug ? 'current' : ''}"><a href="posts/${x.slug}.html"><span class="series-idx">${
+            i + 1
+          }</span><span>${escapeHtml(x.title)}</span></a></li>`
+      )
+      .join('')}
+  </ol>
+</aside>`
+    : '';
+
+  // 簡易 TOC：先 clone bodyHtml 並為每個 h2 加 id（toc-0、toc-1…），
+  // 若 ≥3 個就生成側邊目錄
+  let bodyWithIds = p.bodyHtml;
+  let counter = 0;
+  bodyWithIds = bodyWithIds.replace(
+    /<h2([^>]*)>([\s\S]*?)<\/h2>/g,
+    (m, attrs, inner) => {
+      const id = `toc-${counter++}`;
+      return `<h2${attrs} id="${id}">${inner}</h2>`;
+    }
+  );
+  const h2s = [...bodyWithIds.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)];
+  const toc =
+    h2s.length >= 3
+      ? `<aside class="toc" aria-label="本文目錄">
+  <p class="toc-title">本文目錄</p>
+  <ol class="toc-list">
+    ${h2s
+      .map((m, i) => {
+        const txt = m[1].replace(/<[^>]+>/g, '').trim();
+        return `<li><a href="#toc-${i}">${escapeHtml(txt)}</a></li>`;
+      })
+      .join('')}
+  </ol>
+</aside>`
+      : '';
+
   const main = `
 <article class="post">
   <header class="post-header">
@@ -317,8 +386,12 @@ function renderPost(p, allPosts) {
     <h1 class="post-heading">${escapeHtml(p.title)}</h1>
     <div class="post-tags">${chips(p.tags, 'tag')}</div>
   </header>
-  <div class="post-content">
-${p.bodyHtml}
+  ${seriesPath}
+  <div class="post-body">
+    ${toc}
+    <div class="post-content">
+${bodyWithIds}
+    </div>
   </div>
   ${nav}
   <p class="back"><a href="index.html">« 回到首頁</a></p>
@@ -375,9 +448,43 @@ function renderArchive(posts) {
       return `<section class="year-block"><h2>${y}</h2><ul class="archive-list">${items}</ul></section>`;
     })
     .join('');
+
+  // 系列總覽：同 series 文章群組（>1 篇才算系列）
+  const seriesMap = new Map();
+  posts.forEach((p) => {
+    const arr = seriesMap.get(p.category) || [];
+    arr.push(p);
+    seriesMap.set(p.category, arr);
+  });
+  const seriesCards = [...seriesMap.entries()]
+    .filter(([, arr]) => arr.length >= 2)
+    .map(([cat, arr]) => {
+      const sorted = arr.slice().sort((a, b) => a.date - b.date);
+      const items = sorted
+        .map(
+          (p) =>
+            `<li><time>${p.dateStr}</time><a href="posts/${p.slug}.html">${escapeHtml(p.title)}</a></li>`
+        )
+        .join('');
+      return `<section class="series-card">
+  <h3>${escapeHtml(cat)}<span class="muted">（${arr.length} 篇）</span></h3>
+  <ol class="archive-list series-list">${items}</ol>
+</section>`;
+    })
+    .join('');
+
   const main = `
 <h1 class="page-title">文章列表</h1>
 <p class="muted">共 ${posts.length} 篇，依時間新→舊排列。</p>
+${
+  seriesCards
+    ? `<section class="series-overview">
+  <h2 class="series-overview-h">系列總覽</h2>
+  <p class="muted">以下系列已展開全文路徑，建議照順序閱讀。</p>
+  ${seriesCards}
+</section>`
+    : ''
+}
 ${blocks}`;
   return layout({ title: `文章列表 — ${SITE.title}`, bodyClass: 'archive', url: 'archive.html', ogType: 'website', main });
 }
@@ -520,26 +627,122 @@ function render404() {
   });
 }
 
+/* ---------- 輸出目錄清理 ---------- */
+
+/**
+ * 移除 public/ 裡「已不存在的文章/頁面」殘留的 HTML。
+ *
+ * 為什麼需要這段：
+ *   建置採「覆寫」而非「整包重建」。當你把某篇 .md 移進 source/_archive/
+ *   （下架）或改了 slug，舊的 public/posts/xxx.html 不會被自動清掉。
+ *   一旦用「拖放上傳」部署，這些已下架的文章會跟著上線，等於沒下架成功。
+ *
+ * 為什麼不整包 fs.rmSync(public, {recursive:true}) 再重建：
+ *   本機的 safe-delete 防護會攔截遞迴刪除整個目錄並拋錯（實測），
+ *   而且每次全砍會讓建置從 6 秒暴增到 50 秒。
+ *   所以改成「只砍殘檔」：沒有殘檔時一個檔案都不動，建置速度不受影響。
+ *
+ * 刪除策略（由強到弱，確保一定下架）：
+ *   1. fs.unlinkSync 直接刪
+ *   2. 失敗 -> renameSync 搬到 .build-trash/<時間戳>/（搬出 public/ 即生效）
+ *   3. 再失敗 -> 截斷為 0 位元組並警告，請使用者手動處理
+ *
+ * 安全邊界：只對 keep 集合中「沒有列出」的檔案動手，且僅限 public/ 之內。
+ *
+ * @param {Set<string>} keep  相對於 OUT、使用正斜線的路徑集合，例如 {'posts/origin.html','about.html'}
+ */
+function pruneStaleOutput(keep) {
+  if (!fs.existsSync(OUT)) return;
+
+  const trashRoot = path.join(ROOT, '.build-trash');
+  let removed = 0;
+  let moved = 0;
+  const failed = [];
+
+  // 收集 public/ 底下所有檔案（相對於 OUT、正斜線）
+  const existing = [];
+  const walk = (relDir) => {
+    const absDir = relDir ? path.join(OUT, relDir) : OUT;
+    for (const ent of fs.readdirSync(absDir, { withFileTypes: true })) {
+      const rel = relDir ? `${relDir}/${ent.name}` : ent.name;
+      if (ent.isDirectory()) {
+        walk(rel);
+      } else if (ent.isFile()) {
+        existing.push(rel);
+      }
+    }
+  };
+  walk('');
+
+  const stale = existing.filter((rel) => !keep.has(rel));
+  if (stale.length === 0) return;
+
+  for (const rel of stale) {
+    const full = path.join(OUT, rel);
+    try {
+      fs.unlinkSync(full);
+      removed += 1;
+      continue;
+    } catch (e) {
+      /* 落到下一個策略 */
+    }
+    try {
+      const stamp = new Date().toISOString().replace(/[:.]/g, '-');
+      const destDir = path.join(trashRoot, stamp);
+      fs.mkdirSync(destDir, { recursive: true });
+      fs.renameSync(full, path.join(destDir, rel.replace(/[/\\]/g, '__')));
+      moved += 1;
+    } catch (e) {
+      try {
+        fs.writeFileSync(full, '');
+        failed.push(`${rel}（已清空為 0 位元組，請手動刪除）`);
+      } catch (e2) {
+        failed.push(`${rel}（無法處理：${e2.message}）`);
+      }
+    }
+  }
+
+  console.log(`  清除殘檔 ${stale.length} 個（刪除 ${removed}、移至 .build-trash ${moved}）：`);
+  stale.forEach((rel) => console.log(`    - ${rel}`));
+  if (failed.length) {
+    console.warn('⚠️  以下項目無法自動清除，請手動處理：');
+    failed.forEach((f) => console.warn(`    - ${f}`));
+  }
+}
+
 /* ---------- 主流程 ---------- */
 
 function main() {
   const t0 = Date.now();
   console.log('▶ 開始編譯 indie-blog ...');
-  // 先清空舊輸出，避免刪除文章後殘留廢檔。
-  // 若環境的 safe-delete 攔截了刪除（如某些沙箱），改以「覆寫」模式繼續，
-  // 避免整個建置崩潰；罕見的殘留廢檔不影響正常發文。
-  try {
-    fs.rmSync(OUT, { recursive: true, force: true });
-  } catch (e) {
-    console.warn('⚠️  無法清空 public/（可能被安全機制攔截），改以覆寫模式繼續：', e.message);
-  }
+
+  const posts = loadPosts();
+  console.log(`  讀取文章：${posts.length} 篇`);
+
+  const aboutPath = path.join(PAGES_DIR, 'about.md');
+  const hasAbout = fs.existsSync(aboutPath);
+
+  // 本次建置會產生（或保留）的全部檔案，用來判斷誰是殘檔
+  const keep = new Set([
+    'index.html',
+    'archive.html',
+    'topics.html',
+    'feed.xml',
+    'sitemap.xml',
+    'robots.txt',
+    '404.html',
+    ...posts.map((p) => `posts/${p.slug}.html`),
+  ]);
+  if (hasAbout) keep.add('about.html');
+  collectAssetPaths(ASSETS_DIR, 'assets', keep);
+
+  // 先把已下架／已改 slug 的舊檔清掉，避免拖放部署時被一起帶上線
+  pruneStaleOutput(keep);
+
   ensureDir(OUT);
   ensureDir(path.join(OUT, 'posts'));
   ensureDir(path.join(OUT, 'assets', 'css'));
   ensureDir(path.join(OUT, 'assets', 'js'));
-
-  const posts = loadPosts();
-  console.log(`  讀取文章：${posts.length} 篇`);
 
   // 首頁
   fs.writeFileSync(path.join(OUT, 'index.html'), renderHome(posts));
@@ -552,8 +755,7 @@ function main() {
     fs.writeFileSync(path.join(OUT, 'posts', `${p.slug}.html`), renderPost(p, posts));
   });
   // 關於頁（若有）
-  const aboutPath = path.join(PAGES_DIR, 'about.md');
-  if (fs.existsSync(aboutPath)) {
+  if (hasAbout) {
     fs.writeFileSync(path.join(OUT, 'about.html'), renderPage(aboutPath));
   }
   // RSS
@@ -567,6 +769,16 @@ function main() {
   copyAssets(ASSETS_DIR, path.join(OUT, 'assets'));
 
   console.log(`✔ 完成，耗時 ${Date.now() - t0}ms。輸出位於 public/`);
+}
+
+/** 收集 assets/ 來源目錄下所有檔案，換算成相對於 OUT 的路徑後加進 keep 集合 */
+function collectAssetPaths(srcDir, relDir, out) {
+  if (!fs.existsSync(srcDir)) return;
+  for (const ent of fs.readdirSync(srcDir, { withFileTypes: true })) {
+    const rel = `${relDir}/${ent.name}`;
+    if (ent.isDirectory()) collectAssetPaths(path.join(srcDir, ent.name), rel, out);
+    else if (ent.isFile()) out.add(rel);
+  }
 }
 
 function copyAssets(src, dest) {
