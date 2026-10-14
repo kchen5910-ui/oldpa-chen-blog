@@ -1,6 +1,7 @@
 ---
 title: 遠絡的三個親歷病例
 date: 2026-08-21
+order: 4
 category: 遠絡筆記
 tags: [遠絡, 柯尚志, 陳老叟, 病例, CRPS]
 slug: enraku-cases

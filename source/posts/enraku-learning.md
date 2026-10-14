@@ -1,6 +1,7 @@
 ---
 title: 我怎麼學會遠絡的
 date: 2026-08-20
+order: 3
 category: 遠絡筆記
 tags: [遠絡, 柯尚志, 陳老叟, 學習, 體流線]
 slug: enraku-learning

@@ -1,6 +1,7 @@
 ---
 title: 遠絡醫學，和我那段還沒理清楚的緣分
 date: 2026-08-18
+order: 1
 category: 遠絡筆記
 tags: [遠絡, 柯尚志, 陳老叟, 回憶]
 slug: enraku-beginning

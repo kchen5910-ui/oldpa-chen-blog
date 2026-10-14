@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/">
+<script>window.COMMENTS_API_BASE="https://oldpa-chen-blog.onrender.com";</script>
+<title>AMCT 與 Thompson：同一顆診斷引擎，兩種施工法 — 陳老叟的筆記</title>
+<meta name="description" content="AMCT 與 Thompson 都走低力路線、共用同一套 Derefield 腿檢，差別幾乎只在後端怎麼把力送進去。這篇解開「為什麼 AMCT 感覺比較慢」。">
+<link rel="canonical" href="https://oldpa-chen.netlify.app/posts/amct-thompson-compare.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AMCT 與 Thompson：同一顆診斷引擎，兩種施工法 — 陳老叟的筆記">
+<meta property="og:description" content="AMCT 與 Thompson 都走低力路線、共用同一套 Derefield 腿檢，差別幾乎只在後端怎麼把力送進去。這篇解開「為什麼 AMCT 感覺比較慢」。">
+<meta property="og:url" content="https://oldpa-chen.netlify.app/posts/amct-thompson-compare.html">
+<meta property="og:site_name" content="陳老叟的筆記">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AMCT 與 Thompson：同一顆診斷引擎，兩種施工法 — 陳老叟的筆記">
+<meta name="twitter:description" content="AMCT 與 Thompson 都走低力路線、共用同一套 Derefield 腿檢，差別幾乎只在後端怎麼把力送進去。這篇解開「為什麼 AMCT 感覺比較慢」。">
+<meta name="theme-color" content="#2f6f6b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='22'%20fill='%232f6f6b'/%3E%3Ctext%20x='50'%20y='71'%20font-size='58'%20text-anchor='middle'%20fill='%23ffffff'%20font-family='sans-serif'%3E%E9%99%B3%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="alternate" type="application/rss+xml" title="陳老叟的筆記" href="feed.xml">
+</head>
+<body class="post-page">
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">陳老叟的筆記</a>
+    <nav class="nav">
+      <a href="index.html">首頁</a>
+      <a href="archive.html">文章</a>
+      <a href="topics.html">分類 / 標籤</a>
+      <a href="about.html">關於</a>
+      <a href="feed.xml" title="RSS">RSS</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="切換深色模式" title="切換深色模式">◐</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap post-page">
+
+<article class="post">
+  <header class="post-header">
+    <div class="post-meta">
+      <time>2026-09-24</time>
+      <a class="chip cat" href="topics.html#cat-AMCT%20%E6%8A%80%E8%A1%93%E6%AF%94%E8%BC%83">AMCT 技術比較</a>
+    </div>
+    <h1 class="post-heading">AMCT 與 Thompson：同一顆診斷引擎，兩種施工法</h1>
+    <div class="post-tags"><a class="chip" href="topics.html#tag-AMCT" data-tag="AMCT">AMCT</a><a class="chip" href="topics.html#tag-Thompson" data-tag="Thompson">Thompson</a><a class="chip" href="topics.html#tag-%E4%BD%8E%E5%8A%9B%E6%8A%80%E8%A1%93" data-tag="低力技術">低力技術</a><a class="chip" href="topics.html#tag-%E8%85%BF%E9%95%B7%E6%AA%A2%E6%9F%A5" data-tag="腿長檢查">腿長檢查</a><a class="chip" href="topics.html#tag-%E6%8A%80%E8%A1%93%E6%AF%94%E8%BC%83" data-tag="技術比較">技術比較</a></div>
+  </header>
+  
+<aside class="series-path" aria-label="系列閱讀路徑">
+  <div class="series-path-head">
+    <span class="series-path-label">系列閱讀路徑</span>
+    <span class="series-path-title">AMCT 技術比較</span>
+    <span class="series-path-progress">第 2 / 3 篇</span>
+  </div>
+  <ol class="series-path-list">
+    <li class=""><a href="posts/amct-gonstead-thompson-overview.html"><span class="series-idx">1</span><span>三種脊椎矯正技術全面比較：Gonstead、Thompson、AMCT</span></a></li><li class="current"><a href="posts/amct-thompson-compare.html"><span class="series-idx">2</span><span>AMCT 與 Thompson：同一顆診斷引擎，兩種施工法</span></a></li><li class=""><a href="posts/amct-safety-discipline.html"><span class="series-idx">3</span><span>知道何時不該做：三套脊椎矯正技術共享的安全紀律</span></a></li>
+  </ol>
+</aside>
+  <div class="post-body">
+    
+    <div class="post-content">
+<blockquote>
+<p><strong>給讀者的說明</strong></p>
+<ul>
+<li><strong>主要讀者</strong>：脊骨矯正學生與醫師，特別是已接觸過 Gonstead 全脊椎 X 光思路、想理解兩套低力技術內部邏輯者。</li>
+<li><strong>次要讀者</strong>：對「為什麼不同技術感覺快慢不同」感到好奇的患者。</li>
+<li><strong>本文範圍</strong>：本篇聚焦 AMCT（Activator Methods）與 Thompson Terminal Point Technique 兩者。兩套都屬低力技術、且共用同一套腿檢診斷引擎，差別幾乎只在後端怎麼把力送進去。三套技術的全面比較見<a href="amct-gonstead-thompson-overview.html">三種脊椎矯正技術全面比較：Gonstead、Thompson、AMCT</a>，安全主軸見<a href="amct-safety-discipline.html">知道何時不該做：三套脊椎矯正技術共享的安全紀律</a>。</li>
+<li><strong>立場聲明</strong>：比較非褒貶；適用情境的描述避免療效宣稱。</li>
+</ul>
+</blockquote>
+<h2 id="toc-0">AMCT 與 Thompson：共用引擎，兩種施工法</h2>
+<p>把鏡頭從「三套」收斂到「這兩套」，會發現一件關鍵事：<strong>它們共用同一顆診斷引擎，差別幾乎只在後端怎麼矯正。</strong></p>
+<h3>2.1 同一顆引擎：Derefield 腿檢</h3>
+<ul>
+<li><strong>AMCT</strong> 的腿長檢查：俯臥 <strong>Position 1</strong>（腿伸直）＋ <strong>Position 2</strong>（膝屈 90°）。</li>
+<li><strong>Thompson</strong> 的檢查：俯臥 <strong>Step I</strong>（腿伸直、讀內踝）＋ <strong>Step II</strong>（膝屈 90°）＋ <strong>Step III</strong>（轉頭）。</li>
+</ul>
+<p>兩者都出自 <strong>Derefield</strong> 系統，讀法與姿勢位置幾乎一致。也就是說：</p>
+<blockquote>
+<p><strong>差別不在診斷，在矯正工具</strong>——一個用彈簧器械，一個用落板床。</p>
+</blockquote>
+<p>💡 <strong>患者小語</strong>：兩位醫師都會請你趴好、看你的腿長短變化來判斷哪裡需要處理。這套「看腿」的方法，其實是同一個老祖宗（Derefield）傳下來的。</p>
+<hr>
+<h3>2.2 真正的分岔：分類器 vs 驗證器（速度差的根源）</h3>
+<p>這是理解 AMCT 與 Thompson 速度差最關鍵的一點，也是解開「為什麼 AMCT 感覺比較慢」的鑰。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>腿檢的角色</th>
+<th>決策節點</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Thompson</strong></td>
+<td><strong>分類器</strong>：一趟腿檢把病人分到 +D／−D／CS／OCS／BCS／XD 其中一類 → 依症候群矯正 → 結尾再驗一次</td>
+<td><strong>≈ 症候群數（個位數）</strong></td>
+</tr>
+<tr>
+<td><strong>AMCT</strong></td>
+<td><strong>逐節驗證器</strong>：每個節段做隔離測試，讀腿長是否回均等，再往下</td>
+<td><strong>≈ 節段數</strong></td>
+</tr>
+</tbody></table>
+<p>Thompson 原書甚至明文規定：頸椎段單次推力無效就「換下一個椎體」，不在同一節硬測。AMCT 則因隔離測試的前提是「測試前雙腿在姿勢 #1／#2 均等」，而均等靠前一節剛矯正完才成立，所以必須<strong>測→治→重測</strong>一步步走，不能先全測再治。</p>
+<blockquote>
+<p><strong>結論</strong>：時間差不在腿檢次數，也不在掃描順序，而在「逐節隔離測試」的節點數隨節段線性成長。想省時間，該減的是隔離測試節點，不是改順序。</p>
+</blockquote>
+<p>🩺 <strong>給臨床者</strong>：這點直接呼應「效率改造」的思路——若想壓縮 AMCT 單次時間，借 Thompson 的「分類器」邏輯（只對少數篩檢陽性節點做隔離測試、末端用儀器複核）比改掃描順序有效得多，且因共用引擎、不必換器械。</p>
+<hr>
+<h3>2.3 矯正力從哪來：落板慣性 vs 器械彈簧</h3>
+<p>兩者都「低力」，但力的來源不同：</p>
+<ul>
+<li><strong>Thompson</strong>：醫師出力小，落板急停後靠病人身體慣性完成。醫師肩肘負擔低、病人不需扭轉；落板的價值是「降低施力需求」，<strong>不是加快掃描</strong>。</li>
+<li><strong>AMCT</strong>：力完全來自器械釋放的預壓彈簧，醫師只是穩定接觸手。優點是每次衝量高度一致、可重複、可調力度檔位。</li>
+</ul>
+<p>→ 對適用情境的影響：AMCT 的力更「標準化、可複製」；Thompson 的力帶一點徒手手感變數（落板張力設定、接觸精準度）。</p>
+<hr>
+<h3>2.4 能不能「先掃完再治」</h3>
+<ul>
+<li><strong>Thompson</strong>：可以。腿檢先跑完、分到症候群，再依症候群依次治；中段只在症候群層級重測。</li>
+<li><strong>AMCT</strong>：不行。隔離測試的前提鏈（測試前雙腿均等）依賴前一節剛矯正完，斷不了。</li>
+</ul>
+<p>→ 這也解釋了為什麼「先全測再治」這類提案對 AMCT 不可行，對 Gonstead 卻可以（Gonstead 靠 Nervoscope 與 X 光，不是靠腿檢前提鏈）。</p>
+<hr>
+<h3>2.5 設備與場景綁定</h3>
+<ul>
+<li><strong>Thompson</strong> 綁定落板床；沒有床就做不了。</li>
+<li><strong>AMCT</strong> 綁定 Activator 器械；對床無要求，攜帶方便（出診、運動場邊、床邊皆可）。</li>
+</ul>
+<p>→ 這點在資源有限或需行動服務的場景，會直接影響技術選擇。</p>
+<hr>
+<h3>2.6 共用弱點：頸椎成分的信度</h3>
+<p>兩者都用 Derefield 的「轉頭」成分（Thompson 的 CS 症候群與 Step III；AMCT 的 Position 2 雖也含屈膝，但主要複合體判讀較少依賴轉頭）。然而同儕審查證據顯示：</p>
+<ul>
+<li><strong>Schneider 2007（A 級）</strong>：俯臥腿長檢查中，短腿側（膝伸直）檢查者間 kappa = <strong>0.65</strong>（良好）；但<strong>頭旋轉測試（Derefield）右轉 kappa ≈ 0.04、左轉 ≈ −0.2</strong>，幾乎純機率。</li>
+<li><strong>Shambaugh 1988（A 級）</strong>：則認為可可靠測出 &lt; 3 mm 腿長差、可偵測頭旋轉造成的變化——與上述結論<strong>直接衝突</strong>，20 年未收斂。</li>
+</ul>
+<blockquote>
+<p>這是兩者<strong>共用的、必須標明的方法學脆弱點</strong>。重大臨床決策不應只靠腿檢，要配觸診、影像與病史。</p>
+</blockquote>
+<p>🩺 <strong>給臨床者</strong>：寫入紀錄與教學時，宜把腿檢定位為「篩檢與追蹤工具」而非「確診工具」，並誠實呈現上述信度衝突。</p>
+<hr>
+<h3>2.7 中立小結：不是誰比較好，是 matched to context</h3>
+<p>把上述發現濃縮成一句話：</p>
+<blockquote>
+<p><strong>Thompson 與 AMCT 是「同一診斷引擎、兩種後端施工法」。選誰，取決於病人耐受度、設備、速度需求與你對「逐節驗證」的偏好——不是路線優劣。</strong></p>
+</blockquote>
+<p>（療效方面，兩者都尚缺高級別證據支持「節段特異性優於非特異性」，適用情境的描述應避免療效宣稱。）</p>
+<hr>
+<hr>
+<h2 id="toc-1">參考資料</h2>
+<p>本文所引文獻與<a href="amct-gonstead-thompson-overview.html">三種脊椎矯正技術全面比較：Gonstead、Thompson、AMCT</a>完全相同，請見該篇文末的「參考資料性質速覽」。</p>
+<blockquote>
+<p><strong>誠實聲明</strong>：本文 Gonstead 技術細節以《Textbook of Clinical Chiropractic: A Specific Biomechanical Approach》（Plaugher 主編）為主要依據，輔以 Extremity 與 Hints 兩本參考；Hints 中與內科相關的條目（台美俱屬受限或有爭議領域）暫不納入。三份原書 PDF 已完成 OCR 並交叉驗證。療效相關主張受限於現有證據層級，文中已避免誇大。</p>
+</blockquote>
+
+    </div>
+  </div>
+  
+<nav class="post-nav">
+  <span><a href="posts/amct-gonstead-thompson-overview.html">« 三種脊椎矯正技術全面比較：Gonstead、Thompson、AMCT</a></span>
+  <span><a href="posts/amct-safety-discipline.html">知道何時不該做：三套脊椎矯正技術共享的安全紀律 »</a></span>
+</nav>
+  <p class="back"><a href="index.html">« 回到首頁</a></p>
+  <section class="comments" id="comments" data-slug="amct-thompson-compare" aria-label="留言區">
+    <h2 class="comments-title">留言</h2>
+    <div class="comments-list" id="comments-list"><p class="comments-loading muted">讀取留言中…</p></div>
+    <form class="comment-form" id="comment-form" method="post" novalidate>
+      <div class="form-row">
+        <label for="comment-name">名稱</label>
+        <input type="text" id="comment-name" name="name" maxlength="40" placeholder="訪客" autocomplete="nickname">
+      </div>
+      <div class="form-row">
+        <label for="comment-body">留言內容 <span class="req">*</span></label>
+        <textarea id="comment-body" name="body" rows="4" maxlength="2000" placeholder="想說點什麼…（不可為空）" required></textarea>
+        <p class="form-error" id="comment-error" role="alert"></p>
+      </div>
+      <div class="hp-field" aria-hidden="true">
+        <label>請勿填寫此欄<input type="text" name="hp" id="comment-hp" tabindex="-1" autocomplete="off"></label>
+      </div>
+      <div class="form-actions">
+        <span class="chars-hint" id="comment-count">0 / 2000</span>
+        <button type="submit" class="btn-primary">發表留言</button>
+      </div>
+    </form>
+  </section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 陳老叟 · 陳老叟的筆記</p>
+    <p class="muted">本部落格由 Markdown 靜態生成，自由撰寫、獨立部署。</p>
+    <p class="footer-crosslink"><span class="muted">想預約或看服務項目？</span> <a href="https://oldfolksgang.com.tw/">老師傅工作室 · 美式整復（士林）</a></p>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/comments.js"></script>
+</body>
+</html>

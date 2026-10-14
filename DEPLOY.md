@@ -79,3 +79,28 @@ Netlify 會自動執行 `npm install`（安裝 `marked`）後跑 `node build.js`
 - [ ] 確認 `source/site.json` 的 `title` / `author` / `description` 都是你要的
 - [ ] 部署後回填 `baseUrl`（見方式 A 第 3 步）
 - [ ] （選配）設定 `socialImage`（分享到社群時的預覽圖，留空則用站名）
+
+---
+
+## 附：系列文章排序慣例（一律倒序顯示）
+
+**規則（2026-10-09 確立）**：凡是同一 `category` 有 2 篇以上的「系列文章」，每篇 frontmatter 都必須有 `order` 欄位，值按**發布／閱讀順序**編號（第 1 篇 = 1，最後 1 篇 = N）。
+
+- `build.js` 主列表（首頁／archive）排序邏輯是「日期新→舊，同日則 `order` 降序」→ 因此 `order` 最大的（系列最後一篇）排在前面，主列表**一律倒序**（結尾篇在前）。
+- 單篇系列（category 僅 1 篇）不需要 `order`。
+- 系列總覽卡片（archive 裡的 series-list）與單篇內的「上一篇／下一篇」「系列路徑」仍按 `order` **升序**排列，作為閱讀引導，不動。
+
+**怎麼加 `order`**：在每篇 md 的 frontmatter 的 `date:` 行下面加一行 `order: N` 即可，例如：
+
+```yaml
+---
+title: 肘部筆記（一）：…
+date: 2026-09-30
+order: 1          # ← 系列第 1 篇
+category: 肘部筆記
+---
+```
+
+**為什麼要有這條**：曾發生「肘部筆記」「隨筆觀察」兩個同日期系列忘記加 `order`，導致主列表退化成依檔名排序、變成正序。2026-10-09 已補齊肘部筆記、隨筆觀察、遠絡筆記三個系列的 `order`。往後新增系列文章請直接帶 `order`，避免再犯。
+
+> 注意：改完 `source/posts/` 後，本地 `public/` 與 `deploy-bundle.zip` 還是舊排序，要等下次 `node build.js` + 重包 zip + 上傳才會在線上生效。

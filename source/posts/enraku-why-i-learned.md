@@ -1,6 +1,7 @@
 ---
 title: 我為什麼去學遠絡
 date: 2026-08-19
+order: 2
 category: 遠絡筆記
 tags: [遠絡, 柯尚志, 陳老叟, 回憶]
 slug: enraku-why-i-learned

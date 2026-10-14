@@ -13,3 +13,6 @@ comments/backups/
 
 # 建置時被判定為「殘檔」而移出 public/ 的舊檔案（本地留存，不進版控、不部署）
 .build-trash/
+
+# AI 助手本地記憶檔（工具產物，與部落格內容無關，不進版控、不部署）
+.workbuddy-ai/

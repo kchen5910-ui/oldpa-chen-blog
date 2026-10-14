@@ -225,6 +225,28 @@ a.chip:hover { border-color: var(--accent); }
 .post-content a { color: var(--accent); }
 .post-content hr { border: none; border-top: 1px solid var(--line); margin: 2.2em 0; }
 
+/* ---------- 表格（補格線） ---------- */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.6em 0;
+  font-size: .97rem;
+  line-height: 1.7;
+}
+.post-content th, .post-content td {
+  border: 1px solid var(--line);
+  padding: 9px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+.post-content thead th {
+  background: var(--accent-soft);
+  font-weight: 700;
+  color: var(--text);
+}
+.post-content tbody tr:nth-child(even) td { background: var(--bg); }
+.post-content table caption { color: var(--muted); font-size: .85rem; margin-top: .6em; }
+
 /* ---------- 系列閱讀路徑 ---------- */
 .series-path {
   margin: 0 0 32px;

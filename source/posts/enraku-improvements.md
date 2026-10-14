@@ -1,6 +1,7 @@
 ---
 title: 我們的掙扎和努力：遠絡的改進之道
 date: 2026-08-23
+order: 6
 category: 遠絡筆記
 tags: [遠絡, 改進之道, 治療儀器, 學術認可]
 slug: enraku-improvements

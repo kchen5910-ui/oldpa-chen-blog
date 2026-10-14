@@ -2,7 +2,7 @@
 
 > 這份文件**納入 Git 版控**，隨專案一起保存。換人接手、換電腦、或隔一陣子回來，
 > 先看這份就知道現在做到哪、接下來該做什麼。
-> 最後更新：2026-09-05
+> 最後更新：2026-09-27
 
 ---
 
@@ -12,8 +12,9 @@
 
 - **線上網址**：https://oldpa-chen.netlify.app
 - **GitHub 倉庫**：https://github.com/kchen5910-ui/oldpa-chen-blog
-- **本機路徑**：`F:\indie-blog`
-- **相關專案**：官網「老師傅工作室」在 `F:\網頁構想`（**兩者完全獨立，各自部署**）
+- **本機路徑**：`C:/Users/user/OneDrive/indie-blog`
+- **相關專案**：官網「老師傅工作室」在 `C:/Users/user/OneDrive/網頁構想`（**兩者完全獨立、不同目錄、各自獨立 git repo，互不干擾**）
+- **2026-09-27 遷移與定位決議**：source 自 `F:\indie-blog` 整目錄複製至 OneDrive（含 .git 與未提交修改，`node build.js` 驗證可編譯 31 篇）。定位採**主軸＋支線**——醫療/Chiropractic 專業為主軸，另開「隨筆／觀察／牢騷」支線欄目（`category` 如 `隨筆觀察`）容納非醫療內容（戈夫曼、傻子共振等歸此類）；`試刊基準版.md` 不發。OneDrive 會同步 `.git`，commit/checkout 前先暫停 OneDrive 同步。
 
 ### 技術選擇：為什麼不用 Hugo / Hexo / Astro
 
@@ -48,17 +49,22 @@ indie-blog/
 
 ## 3. 目前狀態（2026-09-05）
 
-### 文章：已發布 20 篇
+### 文章：共 34 篇（最後 build 2026-09-27；線上版本仍落後，見 §5）
 
 | 分類（= 系列） | 篇數 | 說明 |
 |---|---|---|
 | 顱薦骨系列 | 8 | CST A–G＋總結，`order: 1..8` 控制順序 |
 | 遠絡筆記 | 7 | 緣起→學習→病例→困境→改進→未竟，日期 08-18～08-24 依序 |
-| AMCT 筆記 | 1 | `amct-genesis`（2026-09-02） |
-| 緣起 | 1 | `origin` |
-| 整骨傳統 | 1 | `european-osteopathy` |
+| AMCT 腿長分析 | 7 | `amct-leglength-00~06` 腿長差系列（2026-09 新增） |
+| AMCT 技術比較 | 3 | `amct-gonstead-thompson-overview` / `amct-thompson-compare` / `amct-safety-discipline`（2026-09 新增） |
+| 隨筆觀察 | 2 | `goffman-fools-resonance` / `shazi-gongzhen-summary`（2026-09-27 新增，非醫療支線） |
+| 科普 | 1 | `chiropractic-intro`（2026-09-27 新增；原 `draft:true` 已翻為 false） |
+| 診間隨想 | 1 | — |
 | 臨床科普 | 1 | `cervicogenic-headache` |
 | 膝蓋筆記 | 1 | `knee-clicking` |
+| 緣起 | 1 | `origin` |
+| 整骨傳統 | 1 | `european-osteopathy` |
+| AMCT 筆記 | 1 | `amct-genesis`（2026-09-02） |
 
 - 首頁顯示最新 **12** 篇（`site.json` 的 `postsPerHome`）；全部文章在 `archive.html`。
 - 單一系列 ≥2 篇時，文章頁會自動產生「系列閱讀路徑」與「上一篇/下一篇（限同系列）」。
@@ -78,7 +84,7 @@ indie-blog/
 本地 main = `7101bc8`。遠端 GitHub 的同步狀態請自行確認：
 
 ```bash
-cd F:/indie-blog
+cd C:/Users/user/OneDrive/indie-blog
 git log --oneline -1                  # 本地最新
 git ls-remote origin HEAD             # 遠端最新（需網路）
 ```
@@ -111,7 +117,7 @@ draft: false              # true 則不發布
 ### 4.2 建置與預覽
 
 ```bash
-cd F:/indie-blog
+cd C:/Users/user/OneDrive/indie-blog
 npm run build      # 等同 node build.js，產出到 public/
 npm run serve      # 開 http://localhost:4321 預覽
 npm run dev        # 建置 + 預覽一次做完
@@ -165,22 +171,18 @@ Netlify 若有連接 GitHub，會自動重新建置並上線。
 
 ---
 
-## 6. 留言功能（已開發，尚未啟用）
+## 6. 留言功能（已啟用：Render 後端已上線）
 
 `comments/server.js` ＋ `comments/manage.js` 是零依賴的 Node 留言後端，
 具備 JSON 持久化、基礎防濫用，以及備份／列表／統計／匯出／還原等維運指令。
 
-**但目前沒有啟用**，原因是它需要一台常駐的 Node 伺服器，而 Netlify 免費方案
-只跑靜態檔、不能跑後端。`site.json` 的 `commentsApiBase` 目前是空字串，
-前端 `assets/js/comments.js` 因而不會發出任何請求。
+**2026-09-27 確認已啟用**：`source/site.json` 的 `commentsApiBase` 已設為
+`https://oldpa-chen-blog.onrender.com`，`build.js` 會在每篇文章注入留言區，
+編出的 HTML 已含可互動留言區塊；後端 API（`/api/comments`）經探測為上線狀態。
+（注意：Render 免費層 redeploy 可能清盤，正式營運前建議排程 `node manage.js backup`，或改 SQLite 提升耐久性。）
 
-若要啟用，需：
-1. 找一台可跑 Node 的主機（VPS / Render / Railway / Fly.io）
-2. 部署 `comments/`，記下對外網址
-3. 回填 `source/site.json` 的 `commentsApiBase`，重新建置
-
-**替代方案**（純靜態、推薦）：改用 giscus 或 utterances，以 GitHub Issue/Discussion
-當留言資料庫，不需要自己養後端，也符合本專案「無後台」的精神。
+若未來要更換後端網址，改 `source/site.json` 的 `commentsApiBase` 後重新建置即可。
+純靜態替代（giscus / utterances）已不再需要，除非想卸下自託管後端。
 
 ---
 
@@ -188,10 +190,10 @@ Netlify 若有連接 GitHub，會自動重新建置並上線。
 
 | # | 項目 | 說明 |
 |---|---|---|
-| 1 | **把 Netlify 連上 GitHub（或重新拖放部署）** | 目前線上版本落後，官網 AMCT 連結是 404。最高優先 |
+| 1 | **十月四日上傳 bundle（最高優先）** | `public/` 已含 34 篇＋留言區（見 §5）。兩選擇：credit 拖放（10/4 後 credits 重置）或改 Git 自動部署。決策見 §7 下方待確認項 |
 | 2 | **把本地 commit 推上 GitHub** | 見 §8，需要本機執行 |
 | 3 | 髖膝足／腰骨盆 10 篇封存稿的改寫 | 改走單篇單篇寫，寫細、寫讀者真正關心的事 |
-| 4 | 決定留言功能走向 | 自託管後端 vs giscus/utterances，或維持不開放 |
+| 4 | ~~決定留言功能走向~~ → 已啟用 Render 後端，結案 | 見 §6 |
 | 5 | `socialImage` 分享預覽圖 | `site.json` 目前空白，社群分享沒有縮圖 |
 | 6 | 首頁只顯示 12 篇 | 文章變多後可考慮提高 `postsPerHome` 或加分頁 |
 
@@ -207,7 +209,7 @@ Netlify 若有連接 GitHub，會自動重新建置並上線。
 **解法**：在本機的終端機（或 Git Bash）自己執行：
 
 ```bash
-cd F:/indie-blog
+cd C:/Users/user/OneDrive/indie-blog
 git push origin main
 ```
 
@@ -242,6 +244,7 @@ git push origin main
 ## 10. 變更紀錄（最近的提交）
 
 ```
+（待 commit）build: 重新編譯 public/（34 篇）；新增 chiropractic-intro / goffman-fools-resonance / shazi-gongzhen-summary；啟用 Render 留言後端
 7101bc8 build: 重新編譯 public/（20 篇）
 1a3fe5f feat(build): 系列閱讀路徑、本文目錄、系列總覽與官網交叉連結
 664e6e1 chore(archive): 腰及骨盆系列五篇封存，暫不發布

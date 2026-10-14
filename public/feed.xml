@@ -5,7 +5,271 @@
     <link>https://oldpa-chen.netlify.app/index.html</link>
     <description>一個自由撰寫、隨心發布的地方。沒有審核，沒有演算法，只有我想寫的東西。</description>
     <language>zh-Hant</language>
-    <lastBuildDate>Sat, 05 Sep 2026 06:28:04 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 07:00:14 GMT</lastBuildDate>
+    <item>
+      <title>頸源性頭痛，再深一點：從診斷金標準到療效數據</title>
+      <link>https://oldpa-chen.netlify.app/posts/cervicogenic-headache-deep.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/cervicogenic-headache-deep.html</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <category>臨床科普</category>
+      <description>這篇是〈頭痛從脖子來〉的深入版。上篇講機制、表現與紅旗；這篇專講兩件事——怎麼「確診」才靠譜（受控診斷性阻斷、來源確認），以及各種療法到底有沒有、有多少證據（藥物分級、物理治療追蹤數據、RF 神經切斷術標竿、整脊 SMT 的證據張力）。給想多懂一點、或本身是醫療相關背景的讀者。</description>
+    </item>
+    <item>
+      <title>治療的十字路口（八）　綜合篇：把地圖攤開</title>
+      <link>https://oldpa-chen.netlify.app/posts/treat-08.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/treat-08.html</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <category>治療的十字路口</category>
+      <description>把地圖攤開：誰靠近治本、誰在預支明日；治本（相對）要兩半湊齊。</description>
+    </item>
+    <item>
+      <title>治療的十字路口（七）　中醫：另一套範式，不能硬塞進我們的尺</title>
+      <link>https://oldpa-chen.netlify.app/posts/treat-07.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/treat-07.html</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <category>治療的十字路口</category>
+      <description>中醫是另一套範式；針灸推拿低預支明日風險，中藥有器官帳，健保綁架用藥。</description>
+    </item>
+    <item>
+      <title>治療的十字路口（六）　復健／物理治療：方向對，但常送不到</title>
+      <link>https://oldpa-chen.netlify.app/posts/treat-06.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/treat-06.html</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <category>治療的十字路口</category>
+      <description>復健練的是主動子系統；台灣實況以被動式器械為主，訓練多落自費。</description>
+    </item>
+    <item>
+      <title>治療的十字路口（五）　AMCT：私心偏愛，但用尺量</title>
+      <link>https://oldpa-chen.netlify.app/posts/treat-05.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/treat-05.html</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <category>治療的十字路口</category>
+      <description>私心偏愛 AMCT，但用同一把尺量；收編機制 F，並誠實標五條邊界。</description>
+    </item>
+    <item>
+      <title>治療的十字路口（四）　手法治療：光譜很寬，落點差很多</title>
+      <link>https://oldpa-chen.netlify.app/posts/treat-04.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/treat-04.html</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <category>治療的十字路口</category>
+      <description>手法治療光譜很寬：只會喬響、推拿按摩的人間煙火、走到控制子系統邏輯。</description>
+    </item>
+    <item>
+      <title>治療的十字路口（三）　現代醫學侵入型：尺拿出來，實際量</title>
+      <link>https://oldpa-chen.netlify.app/posts/treat-03.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/treat-03.html</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <category>治療的十字路口</category>
+      <description>融合術、類固醇、NSAIDs、阿片——尺拿出來實際量，並談健保如何替你選預案。</description>
+    </item>
+    <item>
+      <title>治療的十字路口（二）　框架：治本、治標、預支明日</title>
+      <link>https://oldpa-chen.netlify.app/posts/treat-02.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/treat-02.html</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <category>治療的十字路口</category>
+      <description>一把尺量所有療法：治本（相對）、治標安慰、預支明日三格。</description>
+    </item>
+    <item>
+      <title>治療的十字路口（一）　為什麼要橫向比較</title>
+      <link>https://oldpa-chen.netlify.app/posts/treat-01.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/treat-01.html</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <category>治療的十字路口</category>
+      <description>為什麼不談單一療法、而要橫向比較；先攤開系列地圖與寫作紅線。</description>
+    </item>
+    <item>
+      <title>第七篇（番外）　一顆膝蓋，鬆開整副身體</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-deepen-07.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-deepen-07.html</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+      <category>腿長分析·深入系列</category>
+      <description>番外臨床觀察：一顆膝蓋如何鬆開整副身體。單一個案，機制有研究撐著。</description>
+    </item>
+    <item>
+      <title>第六篇　預後：可逆 vs 累積，你大概落在哪一側</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-deepen-06.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-deepen-06.html</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <category>腿長分析·深入系列</category>
+      <description>最實際的一問：聽完這些我還來不來得及？給一個可逆 vs 累積的判斷框架。</description>
+    </item>
+    <item>
+      <title>第五篇　治療的方向：從哪個子系統下手</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-deepen-05.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-deepen-05.html</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <category>腿長分析·深入系列</category>
+      <description>只講方向不講操作：希望在哪個子系統。壞掉的方式不同，能救的程度也不同。</description>
+    </item>
+    <item>
+      <title>肘部筆記（二）：內側手肘痛，不等於高爾夫球肘——那一側連一篇診斷研究都沒有</title>
+      <link>https://oldpa-chen.netlify.app/posts/elbow-medial-elbow-pain.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/elbow-medial-elbow-pain.html</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <category>肘部筆記</category>
+      <description>手肘內側痛，多數人馬上想到高爾夫球肘。但內側這一側藏著三到四個截然不同的問題：屈肌肌腱、尺側副韌帶、尺神經，還有青少年投擲手的骨突。而且最誠實的一句話是：內側上髁炎的理學檢查，系統回顧裡一篇研究都找不到。</description>
+    </item>
+    <item>
+      <title>肘部筆記（一）：網球肘怎麼查？從書上那個「新方法」，說到真正有數據的幾個動作</title>
+      <link>https://oldpa-chen.netlify.app/posts/elbow-lateral-tests.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/elbow-lateral-tests.html</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <category>肘部筆記</category>
+      <description>我讀的教科書裡有一個叫 Polk's test 的檢查，號稱新方法。二十年過去，它一篇驗證研究都沒有。這篇講清楚網球肘到底該怎麼查：Cozen、Mill、Maudsley 三個測試各自能做什麼、不能做什麼，還有一項最該加進常規的握力量測。</description>
+    </item>
+    <item>
+      <title>第四篇　潛變如何撐大中性區，把多裂肌逼到報銷</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-deepen-04.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-deepen-04.html</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <category>腿長分析·深入系列</category>
+      <description>機制章：黏彈性組織如何潛變、撐大中性區，最後把多裂肌逼到報銷——一條完整因果鏈。</description>
+    </item>
+    <item>
+      <title>第三篇　中性區：那條被忽略的自由活動區間</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-deepen-03.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-deepen-03.html</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+      <category>腿長分析·深入系列</category>
+      <description>中性區（neutral zone）是整套穩定度邏輯最關鍵、也最容易被略過的概念。把它講清楚。</description>
+    </item>
+    <item>
+      <title>第二篇　三個子系統：被動／主動／控制</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-deepen-02.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-deepen-02.html</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <category>腿長分析·深入系列</category>
+      <description>Panjabi 的三子系統模型：被動、主動、控制。脊柱穩定不是「核心夠強」一句話能講完。</description>
+    </item>
+    <item>
+      <title>影片摘要：《傻子共振》——網路時代的群體偏執</title>
+      <link>https://oldpa-chen.netlify.app/posts/shazi-gongzhen-summary.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/shazi-gongzhen-summary.html</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <category>隨筆觀察</category>
+      <description>一支 3 分 32 秒的桌面短影音，用「傻子共振」描述網路時代的群體偏執，並宣稱出自戈夫曼。本文為其語音轉錄與要點整理，並附考證註記：該出處為偽託。</description>
+    </item>
+    <item>
+      <title>從「傻子共振」的謠言，讀回戈夫曼：表演、框架，與我們如何在群體裡確認自己</title>
+      <link>https://oldpa-chen.netlify.app/posts/goffman-fools-resonance.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/goffman-fools-resonance.html</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <category>隨筆觀察</category>
+      <description>一支影片把「傻子共振」掛到戈夫曼頭上。本文先拆謠，再讀回戈夫曼真正寫過的擬劇論、面子工作與框架分析，並誠實劃界：他能解釋什麼、不能解釋什麼。</description>
+    </item>
+    <item>
+      <title>認識脊骨神經醫學（Chiropractic）：一則入門介紹</title>
+      <link>https://oldpa-chen.netlify.app/posts/chiropractic-intro.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/chiropractic-intro.html</guid>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 GMT</pubDate>
+      <category>科普</category>
+      <description>改寫自 Ana E. Clavasquin 的英文短文，重新撰寫並補充證據等級、安全與執業範圍，作為認識 chiropractic 的入門材料。</description>
+    </item>
+    <item>
+      <title>第一篇（證據）　證據量化矩陣：我們講的這些，到底有多可靠</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-deepen-01.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-deepen-01.html</guid>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 GMT</pubDate>
+      <category>腿長分析·深入系列</category>
+      <description>深入系列的證據附冊。把後面要講的三子系統、中性區、潛變，先攤開證據強度與限制。</description>
+    </item>
+    <item>
+      <title>前言：為什麼腿長分析之後，我們要談穩定度</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-deepen-00.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-deepen-00.html</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+      <category>腿長分析·深入系列</category>
+      <description>AMCT 腿長分析系列的延伸。把穩定肌群、中性區、潛變這些零散名詞，攤開成脊柱穩定度的底層邏輯。</description>
+    </item>
+    <item>
+      <title>最年輕的那套手法：當「更準」遇上「更快」</title>
+      <link>https://oldpa-chen.netlify.app/posts/precise-or-profitable.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/precise-or-profitable.html</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <category>診間隨想</category>
+      <description>在徒手療法的幾套系統裡，AMCT 最年輕。它像是看著前兩套的不足長出來的——更講求驗證、力道更一致。但「更準」是有代價的。這篇想跟走進診間的你，聊一個安靜的兩難。</description>
+    </item>
+    <item>
+      <title>知道何時不該做：三套脊椎矯正技術共享的安全紀律</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-safety-discipline.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-safety-discipline.html</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <category>AMCT 技術比較</category>
+      <description>比較完工具，最該守的一條線是「知道什麼時候不該調」。三套技術共享同一套安全紀律：辨原發、放代償、遇紅線就停手、該轉介就轉介。</description>
+    </item>
+    <item>
+      <title>AMCT 與 Thompson：同一顆診斷引擎，兩種施工法</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-thompson-compare.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-thompson-compare.html</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <category>AMCT 技術比較</category>
+      <description>AMCT 與 Thompson 都走低力路線、共用同一套 Derefield 腿檢，差別幾乎只在後端怎麼把力送進去。這篇解開「為什麼 AMCT 感覺比較慢」。</description>
+    </item>
+    <item>
+      <title>三種脊椎矯正技術全面比較：Gonstead、Thompson、AMCT</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-gonstead-thompson-overview.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-gonstead-thompson-overview.html</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <category>AMCT 技術比較</category>
+      <description>Gonstead、Thompson、AMCT 三套「特定矯正」技術並排比較：目標相同，差別在診斷引擎與矯正工具。一篇給醫學生與臨床者的技術地圖。</description>
+    </item>
+    <item>
+      <title>AMCT 筆記（二）：腿長分析系列（七）有些事，我們還不知道</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-leglength-06.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-leglength-06.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <category>AMCT 腿長分析</category>
+      <description>誠實收尾。這套方法哪些地方站得住，哪些地方其實還沒有答案——包括腿長反應性無法在隔離的實驗室環境中被複製。</description>
+    </item>
+    <item>
+      <title>AMCT 筆記（二）：腿長分析系列（六）為什麼他要一直動你的腳踝</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-leglength-05.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-leglength-05.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <category>AMCT 腿長分析</category>
+      <description>把器械、手法跟神經生理串起來。腳踝角度的改變會直接影響反射的強度，而這正是為什麼醫師要一直去動你的腳。</description>
+    </item>
+    <item>
+      <title>AMCT 筆記（二）：腿長分析系列（五）你的平衡是學來的，而且會學錯</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-leglength-04.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-leglength-04.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <category>AMCT 腿長分析</category>
+      <description>控制平衡的程式有可塑性，會被經驗改寫，而且改寫之後不會自動帶到別的情境。這篇回答：為什麼有些人的問題會卡很久。</description>
+    </item>
+    <item>
+      <title>AMCT 筆記（二）：腿長分析系列（四）韌帶不是綁帶，它是感測器</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-leglength-03.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-leglength-03.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <category>AMCT 腿長分析</category>
+      <description>我們習慣以為韌帶是撐住關節的帶子。但在日常最常用的位置附近它其實是鬆的，真正的工作是回報情報。這篇解釋為什麼「喬回去」是個錯的比喻。</description>
+    </item>
+    <item>
+      <title>AMCT 筆記（二）：腿長分析系列（三）五分鐘，你的穩定肌群就安靜了 85%</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-leglength-02.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-leglength-02.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <category>AMCT 腿長分析</category>
+      <description>為什麼久坐會讓人垮掉？週期性負荷的實驗發現，維持姿勢的小型穩定肌在開始工作後五分鐘內活動度掉了 85%。這是全系列裡最接近日常的一篇。</description>
+    </item>
+    <item>
+      <title>AMCT 筆記（二）：腿長分析系列（二）你的腿沒有變短</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-leglength-01.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-leglength-01.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <category>AMCT 腿長分析</category>
+      <description>幾乎每個人的兩條腿都不一樣長，但那通常不是問題。這篇建立「腿長反應性」這個核心觀念，並拆掉「短腿→骨盆歪→腰痠→喬回去」的錯誤因果鏈。</description>
+    </item>
+    <item>
+      <title>AMCT 筆記（二）：腿長分析系列（一）當你趴著的時候，醫生為什麼反復在看你的腳？</title>
+      <link>https://oldpa-chen.netlify.app/posts/amct-leglength-00.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/amct-leglength-00.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <category>AMCT 腿長分析</category>
+      <description>這六篇改寫自 Dr. Rebecca S. Fischer 的〈Leg Length Reactivity〉。前言先回答診間最常問的兩個問題，並把「腿長反應性」這條線鋪開。</description>
+    </item>
     <item>
       <title>AMCT 筆記（一）：他們發明了那把小器械，卻刻意不寫上自己的名字</title>
       <link>https://oldpa-chen.netlify.app/posts/amct-genesis.html</link>
@@ -55,14 +319,6 @@
       <description>上篇說好要講「體流線」和「治療點」怎麼認識。這篇就從課程說起——遠絡不是隨便一個工作坊，它有一套從基礎到研究班、越走越深的課程體系；而真正裝在裡頭的，是十二條體流線和一百零八個治療點。</description>
     </item>
     <item>
-      <title>我為什麼去學遠絡</title>
-      <link>https://oldpa-chen.netlify.app/posts/enraku-why-i-learned.html</link>
-      <guid>https://oldpa-chen.netlify.app/posts/enraku-why-i-learned.html</guid>
-      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
-      <category>遠絡筆記</category>
-      <description>說起來有點滑稽，我當年會去學遠絡，起點不是什麼高明的理論，是被一句招生廣告詞帶進門的——因為我太太有第一型糖尿病。</description>
-    </item>
-    <item>
       <title>歐陸整骨的顱薦骨支派：從 Still 的「身體是一個單元」，到會呼吸的顱骨</title>
       <link>https://oldpa-chen.netlify.app/posts/european-osteopathy.html</link>
       <guid>https://oldpa-chen.netlify.app/posts/european-osteopathy.html</guid>
@@ -77,6 +333,14 @@
       <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
       <category>膝蓋筆記</category>
       <description>膝蓋一蹲就喀喀響，很多人第一個念頭是「軟骨磨光了」。聲音和磨損有關係，但沒那麼直接——先聽聽這聲音到底在說什麼。</description>
+    </item>
+    <item>
+      <title>我為什麼去學遠絡</title>
+      <link>https://oldpa-chen.netlify.app/posts/enraku-why-i-learned.html</link>
+      <guid>https://oldpa-chen.netlify.app/posts/enraku-why-i-learned.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <category>遠絡筆記</category>
+      <description>說起來有點滑稽，我當年會去學遠絡，起點不是什麼高明的理論，是被一句招生廣告詞帶進門的——因為我太太有第一型糖尿病。</description>
     </item>
     <item>
       <title>頭痛從脖子來：當痛在頭，源頭卻在後頸</title>

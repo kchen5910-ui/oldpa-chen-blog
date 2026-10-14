@@ -1,6 +1,7 @@
 ---
 title: 遠絡遇到的那些現實難題
 date: 2026-08-22
+order: 5
 category: 遠絡筆記
 tags: [遠絡, 柯尚志, 陳老叟, 執業困境, 研發]
 slug: enraku-struggles

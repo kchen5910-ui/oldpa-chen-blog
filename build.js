@@ -251,10 +251,10 @@ function loadPosts() {
       order: typeof data.order === 'number' ? data.order : 9999,
     };
   });
-  // 排除草稿，依日期新→舊；同日則依 order 由小到大（序文/系列開頭排前面）
+  // 排除草稿，依日期新→舊；同日則依 order 由大到小（系列結尾/最新篇排前面，倒著數）
   return posts
     .filter((p) => !p.draft)
-    .sort((a, b) => b.date - a.date || a.order - b.order);
+    .sort((a, b) => b.date - a.date || b.order - a.order);
 }
 
 /* ---------- 各頁面 ---------- */
@@ -459,7 +459,7 @@ function renderArchive(posts) {
   const seriesCards = [...seriesMap.entries()]
     .filter(([, arr]) => arr.length >= 2)
     .map(([cat, arr]) => {
-      const sorted = arr.slice().sort((a, b) => a.date - b.date);
+      const sorted = arr.slice().sort((a, b) => a.order - b.order || a.date - b.date);
       const items = sorted
         .map(
           (p) =>
